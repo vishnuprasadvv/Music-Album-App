@@ -32,13 +32,13 @@ const Home:React.FC = () => {
     <div className="content border-2 border-[#E6ECF0] bg-white m-3 rounded-lg p-3">
 
     {/* Search and Filter */}
-    <div className='pb-3 flex gap-3 h-10'>
+    <div className='pb-3 flex gap-3 h-[45px]'>
 
         {/* Search */}
         <div className='relative flex items-center h-full'>
         <input type="text" 
         placeholder='Search'
-        className='border h-full pl-2 pr-10 text-sm rounded-sm border-[#C2CAD3] focus:outline-none focus:ring-1 focus:ring-blue-500'/>
+        className='border h-full pl-2 pr-10 text-sm rounded-sm  md:w-[310px] border-[#C2CAD3] focus:outline-none focus:ring-1 focus:ring-blue-500'/>
         
         <IoSearch className='absolute right-3 text-gray-500 hover:text-blue-500'/>
         </div>
@@ -48,7 +48,7 @@ const Home:React.FC = () => {
 
         <button 
         onClick={() => setIsDropDownOpen(!isDropDownOpen)}
-        className='px-2 text-sm flex h-full items-center gap-2 border border-gray-300 rounded-lg bg-white hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-500'
+        className='px-3 text-xs font-semibold flex h-full items-center gap-2 border border-gray-300 rounded-lg bg-[#E1E4E9] hover:bg-gray-50 focus:outline-none focus:ring-1 focus:ring-blue-500'
         >Type
         <IoIosArrowDown className='' />
         </button>
@@ -85,8 +85,12 @@ const Home:React.FC = () => {
             </thead>
             <tbody>
                 {filteredCollections.map((collection) => (
-                    <tr key={collection.id} className="border-b border-gray-200">
-                        <td className="py-3 px-4">{collection.name}</td>
+                    <tr key={collection.id} className="border-b border-gray-200 h-[68px] text-sm">
+                        <td className="py-3 px-4">
+                            <div>
+                                {collection.name}
+                                <p className='text-xs text-slate-500'>{collection.artist}</p>
+                                </div></td>
                         <td className="py-3 px-4">{collection.type}</td>
                         <td className="py-3 px-4">{collection.songCount}</td>
                         <td className="py-3 px-4">{Math.floor(collection.durationInSeconds / 60)} mins</td>
@@ -95,7 +99,7 @@ const Home:React.FC = () => {
                         <td className="py-3 px-4">
 
                             <button onClick={() => navigate(`/details/${collection.id}`)}
-                                className="text-blue-600 text-sm flex items-center gap-1 hover:text-blue-800 cursor-pointer">
+                                className="text-[#025992] text-sm flex items-center gap-1 hover:text-blue-800 cursor-pointer">
                                     <IoEye />
                                 View Details
                             </button>

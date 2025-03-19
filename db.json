@@ -17,6 +17,8 @@
       "artist": "Jorge Rivera-Herrans",
       "type": "EP",
       "songCount": 5,
+      "durationInSeconds": 900,
+        "sizeInBytes": 48488,
       "songs": [
         {
           "title": "The Battle of Troy",
