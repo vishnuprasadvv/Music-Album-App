@@ -5,6 +5,7 @@ import { fetchCollections } from '../services/api';
 import { useNavigate} from 'react-router-dom';
 import { IoEye, IoSearch } from 'react-icons/io5';
 import { IoIosArrowDown } from 'react-icons/io';
+import { formatDate } from '../utils/formatDate';
 
 const Home:React.FC = () => {
     const [collections, setCollections] = useState<any[]>([]);
@@ -95,7 +96,7 @@ const Home:React.FC = () => {
                         <td className="py-3 px-4">{collection.songCount}</td>
                         <td className="py-3 px-4">{Math.floor(collection.durationInSeconds / 60)} mins</td>
                         <td className="py-3 px-4">{(collection.sizeInBytes / (1024*1024)).toFixed(2)}MB</td>
-                        <td className="py-3 px-4">{new Date(collection.releasedOn).toLocaleDateString()}</td>
+                        <td className="py-3 px-4">{formatDate(collection.releasedOn)}</td>
                         <td className="py-3 px-4">
 
                             <button onClick={() => navigate(`/details/${collection.id}`)}
