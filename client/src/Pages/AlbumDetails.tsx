@@ -27,12 +27,16 @@ interface IAlbum {
 const AlbumDetails:React.FC = () => {
     const {id} = useParams();
     const [album, setAlbum] = useState<IAlbum | null>(null);
-    console.log(id)
 
     if(!id) return;
     useEffect(() => {
-
-        fetchCollectionById('12345').then(setAlbum)
+      const fetchAlbum = async() => {
+        const response = await fetchCollectionById(id);
+        console.log(id)
+        setAlbum(response);
+        console.log(response)
+      }
+       fetchAlbum();
     }, [id]);
 
     if(!album) return <p>Loading...</p>
@@ -92,11 +96,11 @@ const AlbumDetails:React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            {album.songs.map((song, index) => (
+            {album && album.songs && album.songs.map((song, index) => (
 
             <tr key={index} className="border-b border-gray-200 hover:bg-gray-50">
               <td className="py-4 px-4 text-gray-800">{song.title}</td>
-              <td className="py-4 px-4 text-gray-800">{song.performers.join(',')}</td>
+              <td className="py-4 px-4 text-gray-800">{song.performers.join(', ')}</td>
               <td className="py-4 px-4 text-gray-800">{formatTime(song.durationInSeconds)}</td>
               <td className="py-4 px-4 text-gray-800">{(song.sizeInBytes / (1024*1024)).toFixed(2)} MB</td>
             </tr>

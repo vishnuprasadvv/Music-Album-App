@@ -1,33 +1,538 @@
 {
-    "collections": [
-      {
-        "id": "12345",
-        "name": "EPIC: The Troy Saga",
-        "artist": "Jorge Rivera-Herrans",
-        "type": "EP",
-        "songCount": 5,
-        "durationInSeconds": 900,
-        "sizeInBytes": 48488,
-        "releasedOn": "2024-09-03T14:35:00Z"
-      }
-    ],
-    "collectionDetails": [{
-      "id": "12345",
-      "name": "EPIC: The Troy Saga",
+  "collections": [
+    {
+      "id": "1",
+      "name": "EPIC: The Troy Saga (Official Concept Album)",
       "artist": "Jorge Rivera-Herrans",
       "type": "EP",
       "songCount": 5,
       "durationInSeconds": 900,
-        "sizeInBytes": 48488,
+      "sizeInBytes": 48488000,
+      "releasedOn": "2024-09-03T14:35:00Z",
       "songs": [
         {
           "title": "The Battle of Troy",
-          "durationInSeconds": 300,
-          "sizeInBytes": 48488,
+          "durationInSeconds": 240,
+          "sizeInBytes": 12000000,
+          "performers": ["Jorge Rivera-Herrans"]
+        },
+        {
+          "title": "Achilles' Wrath",
+          "durationInSeconds": 180,
+          "sizeInBytes": 9000000,
+          "performers": ["Jorge Rivera-Herrans", "Michael Johnson"]
+        },
+        {
+          "title": "Helen's Lament",
+          "durationInSeconds": 150,
+          "sizeInBytes": 7500000,
+          "performers": ["Sarah Williams", "Jorge Rivera-Herrans"]
+        },
+        {
+          "title": "The Trojan Horse",
+          "durationInSeconds": 210,
+          "sizeInBytes": 10500000,
+          "performers": ["Jorge Rivera-Herrans", "David Chen"]
+        },
+        {
+          "title": "Fall of Troy",
+          "durationInSeconds": 120,
+          "sizeInBytes": 6000000,
           "performers": ["Jorge Rivera-Herrans"]
         }
-      ],
-      "releasedOn": "2024-09-03T14:35:00Z"
-    }]
-  }
-  
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Midnights",
+      "artist": "Taylor Swift",
+      "type": "Album",
+      "songCount": 13,
+      "durationInSeconds": 2580,
+      "sizeInBytes": 125000000,
+      "releasedOn": "2022-10-21T00:00:00Z",
+      "songs": [
+        {
+          "title": "Lavender Haze",
+          "durationInSeconds": 202,
+          "sizeInBytes": 10100000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Maroon",
+          "durationInSeconds": 218,
+          "sizeInBytes": 10900000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Anti-Hero",
+          "durationInSeconds": 200,
+          "sizeInBytes": 10000000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Snow On The Beach",
+          "durationInSeconds": 215,
+          "sizeInBytes": 10750000,
+          "performers": ["Taylor Swift", "Lana Del Rey"]
+        },
+        {
+          "title": "You're On Your Own, Kid",
+          "durationInSeconds": 194,
+          "sizeInBytes": 9700000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Midnight Rain",
+          "durationInSeconds": 175,
+          "sizeInBytes": 8750000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Question...?",
+          "durationInSeconds": 210,
+          "sizeInBytes": 10500000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Vigilante Shit",
+          "durationInSeconds": 164,
+          "sizeInBytes": 8200000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Bejeweled",
+          "durationInSeconds": 194,
+          "sizeInBytes": 9700000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Labyrinth",
+          "durationInSeconds": 247,
+          "sizeInBytes": 12350000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Karma",
+          "durationInSeconds": 204,
+          "sizeInBytes": 10200000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Sweet Nothing",
+          "durationInSeconds": 187,
+          "sizeInBytes": 9350000,
+          "performers": ["Taylor Swift"]
+        },
+        {
+          "title": "Mastermind",
+          "durationInSeconds": 191,
+          "sizeInBytes": 9550000,
+          "performers": ["Taylor Swift"]
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Blinding Lights",
+      "artist": "The Weeknd",
+      "type": "Single",
+      "songCount": 1,
+      "durationInSeconds": 200,
+      "sizeInBytes": 9800000,
+      "releasedOn": "2019-11-29T00:00:00Z",
+      "songs": [
+        {
+          "title": "Blinding Lights",
+          "durationInSeconds": 200,
+          "sizeInBytes": 9800000,
+          "performers": ["The Weeknd"]
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Chromatica",
+      "artist": "Lady Gaga",
+      "type": "Album",
+      "songCount": 16,
+      "durationInSeconds": 2820,
+      "sizeInBytes": 142000000,
+      "releasedOn": "2020-05-29T00:00:00Z",
+      "songs": [
+        {
+          "title": "Chromatica I",
+          "durationInSeconds": 60,
+          "sizeInBytes": 3000000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Alice",
+          "durationInSeconds": 177,
+          "sizeInBytes": 8850000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Stupid Love",
+          "durationInSeconds": 193,
+          "sizeInBytes": 9650000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Rain On Me",
+          "durationInSeconds": 182,
+          "sizeInBytes": 9100000,
+          "performers": ["Lady Gaga", "Ariana Grande"]
+        },
+        {
+          "title": "Free Woman",
+          "durationInSeconds": 191,
+          "sizeInBytes": 9550000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Fun Tonight",
+          "durationInSeconds": 169,
+          "sizeInBytes": 8450000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Chromatica II",
+          "durationInSeconds": 41,
+          "sizeInBytes": 2050000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "911",
+          "durationInSeconds": 172,
+          "sizeInBytes": 8600000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Plastic Doll",
+          "durationInSeconds": 221,
+          "sizeInBytes": 11050000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Sour Candy",
+          "durationInSeconds": 158,
+          "sizeInBytes": 7900000,
+          "performers": ["Lady Gaga", "BLACKPINK"]
+        },
+        {
+          "title": "Enigma",
+          "durationInSeconds": 171,
+          "sizeInBytes": 8550000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Replay",
+          "durationInSeconds": 189,
+          "sizeInBytes": 9450000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Chromatica III",
+          "durationInSeconds": 27,
+          "sizeInBytes": 1350000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Sine From Above",
+          "durationInSeconds": 220,
+          "sizeInBytes": 11000000,
+          "performers": ["Lady Gaga", "Elton John"]
+        },
+        {
+          "title": "1000 Doves",
+          "durationInSeconds": 185,
+          "sizeInBytes": 9250000,
+          "performers": ["Lady Gaga"]
+        },
+        {
+          "title": "Babylon",
+          "durationInSeconds": 175,
+          "sizeInBytes": 8750000,
+          "performers": ["Lady Gaga"]
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Map of the Soul: 7",
+      "artist": "BTS",
+      "type": "Album",
+      "songCount": 20,
+      "durationInSeconds": 3720,
+      "sizeInBytes": 186000000,
+      "releasedOn": "2020-02-21T00:00:00Z",
+      "songs": [
+        {
+          "title": "Intro: Persona",
+          "durationInSeconds": 180,
+          "sizeInBytes": 9000000,
+          "performers": ["RM"]
+        },
+        {
+          "title": "Boy With Luv (feat. Halsey)",
+          "durationInSeconds": 229,
+          "sizeInBytes": 11450000,
+          "performers": ["BTS", "Halsey"]
+        },
+        {
+          "title": "Make It Right",
+          "durationInSeconds": 221,
+          "sizeInBytes": 11050000,
+          "performers": ["BTS"]
+        },
+        {
+          "title": "Jamais Vu",
+          "durationInSeconds": 209,
+          "sizeInBytes": 10450000,
+          "performers": ["Jin", "J-Hope", "Jungkook"]
+        },
+        {
+          "title": "Dionysus",
+          "durationInSeconds": 247,
+          "sizeInBytes": 12350000,
+          "performers": ["BTS"]
+        },
+        {
+          "title": "Interlude: Shadow",
+          "durationInSeconds": 184,
+          "sizeInBytes": 9200000,
+          "performers": ["Suga"]
+        },
+        {
+          "title": "Black Swan",
+          "durationInSeconds": 196,
+          "sizeInBytes": 9800000,
+          "performers": ["BTS"]
+        },
+        {
+          "title": "Filter",
+          "durationInSeconds": 177,
+          "sizeInBytes": 8850000,
+          "performers": ["Jimin"]
+        },
+        {
+          "title": "My Time",
+          "durationInSeconds": 224,
+          "sizeInBytes": 11200000,
+          "performers": ["Jungkook"]
+        },
+        {
+          "title": "Louder than bombs",
+          "durationInSeconds": 218,
+          "sizeInBytes": 10900000,
+          "performers": ["BTS"]
+        },
+        {
+          "title": "ON",
+          "durationInSeconds": 246,
+          "sizeInBytes": 12300000,
+          "performers": ["BTS"]
+        },
+        {
+          "title": "UGH!",
+          "durationInSeconds": 189,
+          "sizeInBytes": 9450000,
+          "performers": ["RM", "J-Hope", "Suga"]
+        },
+        {
+          "title": "00:00 (Zero O'Clock)",
+          "durationInSeconds": 203,
+          "sizeInBytes": 10150000,
+          "performers": ["Jin", "Jimin", "V", "Jungkook"]
+        },
+        {
+          "title": "Inner Child",
+          "durationInSeconds": 210,
+          "sizeInBytes": 10500000,
+          "performers": ["V"]
+        },
+        {
+          "title": "Friends",
+          "durationInSeconds": 218,
+          "sizeInBytes": 10900000,
+          "performers": ["Jimin", "V"]
+        },
+        {
+          "title": "Moon",
+          "durationInSeconds": 184,
+          "sizeInBytes": 9200000,
+          "performers": ["Jin"]
+        },
+        {
+          "title": "Respect",
+          "durationInSeconds": 193,
+          "sizeInBytes": 9650000,
+          "performers": ["RM", "Suga"]
+        },
+        {
+          "title": "We are Bulletproof: the Eternal",
+          "durationInSeconds": 245,
+          "sizeInBytes": 12250000,
+          "performers": ["BTS"]
+        },
+        {
+          "title": "Outro: Ego",
+          "durationInSeconds": 208,
+          "sizeInBytes": 10400000,
+          "performers": ["J-Hope"]
+        },
+        {
+          "title": "ON (feat. Sia)",
+          "durationInSeconds": 249,
+          "sizeInBytes": 12450000,
+          "performers": ["BTS", "Sia"]
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Butter",
+      "artist": "BTS",
+      "type": "Single",
+      "songCount": 1,
+      "durationInSeconds": 164,
+      "sizeInBytes": 8200000,
+      "releasedOn": "2021-05-21T00:00:00Z",
+      "songs": [
+        {
+          "title": "Butter",
+          "durationInSeconds": 164,
+          "sizeInBytes": 8200000,
+          "performers": ["BTS"]
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Future Nostalgia",
+      "artist": "Dua Lipa",
+      "type": "Album",
+      "songCount": 11,
+      "durationInSeconds": 2160,
+      "sizeInBytes": 108000000,
+      "releasedOn": "2020-03-27T00:00:00Z",
+      "songs": [
+        {
+          "title": "Future Nostalgia",
+          "durationInSeconds": 187,
+          "sizeInBytes": 9350000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Don't Start Now",
+          "durationInSeconds": 183,
+          "sizeInBytes": 9150000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Cool",
+          "durationInSeconds": 197,
+          "sizeInBytes": 9850000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Physical",
+          "durationInSeconds": 194,
+          "sizeInBytes": 9700000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Levitating",
+          "durationInSeconds": 203,
+          "sizeInBytes": 10150000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Pretty Please",
+          "durationInSeconds": 188,
+          "sizeInBytes": 9400000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Hallucinate",
+          "durationInSeconds": 219,
+          "sizeInBytes": 10950000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Love Again",
+          "durationInSeconds": 258,
+          "sizeInBytes": 12900000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Break My Heart",
+          "durationInSeconds": 221,
+          "sizeInBytes": 11050000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Good In Bed",
+          "durationInSeconds": 218,
+          "sizeInBytes": 10900000,
+          "performers": ["Dua Lipa"]
+        },
+        {
+          "title": "Boys Will Be Boys",
+          "durationInSeconds": 182,
+          "sizeInBytes": 9100000,
+          "performers": ["Dua Lipa"]
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Happier Than Ever",
+      "artist": "Billie Eilish",
+      "type": "EP",
+      "songCount": 6,
+      "durationInSeconds": 1080,
+      "sizeInBytes": 54000000,
+      "releasedOn": "2021-07-30T00:00:00Z",
+      "songs": [
+        {
+          "title": "Getting Older",
+          "durationInSeconds": 244,
+          "sizeInBytes": 12200000,
+          "performers": ["Billie Eilish"]
+        },
+        {
+          "title": "I Didn't Change My Number",
+          "durationInSeconds": 173,
+          "sizeInBytes": 8650000,
+          "performers": ["Billie Eilish"]
+        },
+        {
+          "title": "Billie Bossa Nova",
+          "durationInSeconds": 198,
+          "sizeInBytes": 9900000,
+          "performers": ["Billie Eilish"]
+        },
+        {
+          "title": "my future",
+          "durationInSeconds": 199,
+          "sizeInBytes": 9950000,
+          "performers": ["Billie Eilish"]
+        },
+        {
+          "title": "Oxytocin",
+          "durationInSeconds": 196,
+          "sizeInBytes": 9800000,
+          "performers": ["Billie Eilish"]
+        },
+        {
+          "title": "GOLDWING",
+          "durationInSeconds": 170,
+          "sizeInBytes": 8500000,
+          "performers": ["Billie Eilish"]
+        }
+      ]
+    }
+  ]
+}

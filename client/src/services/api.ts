@@ -6,7 +6,8 @@ export const fetchCollections = async () => {
 };
 
 export const fetchCollectionById = async (id: string) => {
-    const response = await axios.get(`http://localhost:5000/collectionDetails/${id}`);
+    const response = await axios.get(`http://localhost:5000/collections/${id}`);
+    console.log(response)
     return response.data;
 };
 

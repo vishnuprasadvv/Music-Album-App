@@ -1,6 +1,6 @@
 
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { fetchCollections } from '../services/api';
 import { useNavigate} from 'react-router-dom';
 import { IoEye, IoSearch } from 'react-icons/io5';
@@ -10,8 +10,19 @@ import { formatDate } from '../utils/formatDate';
 const Home:React.FC = () => {
     const [collections, setCollections] = useState<any[]>([]);
     const [filters, setFilters] = useState('');
+    const[selectedItems, setSelectedItems] = useState<string[]>([]);
     const [isDropDownOpen, setIsDropDownOpen] = useState<boolean>(false);
     const navigate = useNavigate();
+    const dropDownRef = useRef<HTMLDivElement>(null)
+
+    const options = ['Album', 'EP', 'Single'];
+
+    const toggleSelection = (option: string) => {
+        setSelectedItems((prev) =>
+             prev.includes(option) 
+            ? prev.filter((item) => item !== option)
+        : [...prev, option])
+    }
 
     useEffect(() => {
         fetchCollections().then(setCollections)
@@ -20,6 +31,20 @@ const Home:React.FC = () => {
     const filteredCollections = filters 
     ? collections.filter((c) => c.type === filters) 
     : collections;
+
+    //close dropdown when clicking outside
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if(dropDownRef.current && !dropDownRef.current.contains(event.target as Node)) {
+                setIsDropDownOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+
+    },[])
 
   return (
     <div className='bg-[#F5F8FA] h-[100vh]'>
@@ -45,7 +70,7 @@ const Home:React.FC = () => {
         </div>
 
     {/* Filter */}
-    <div className='relative h-full'>
+    <div className='relative h-full'  ref={dropDownRef}>
 
         <button 
         onClick={() => setIsDropDownOpen(!isDropDownOpen)}
@@ -57,12 +82,25 @@ const Home:React.FC = () => {
 
 
         {isDropDownOpen && (
-            <div className='absolute right-0 mt-1 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10'>
+            <div 
+           
+            className='absolute right-0 mt-1 w-40 bg-white border border-gray-200 rounded-md shadow-lg z-10'>
                 <ul className='py-1'>
-                    <li className='px-3 py-2 text-sm hover:bg-gray-100'>All</li>
-                    <li className='px-3 py-2 text-sm hover:bg-gray-100'>EP</li>
-                    <li className='px-3 py-2 text-sm hover:bg-gray-100'>Album</li>
-                    <li className='px-3 py-2 text-sm hover:bg-gray-100'>Single</li>
+                {options.map((option) => (
+              <li
+                key={option}
+                className="px-3 py-2 text-sm flex gap-3 items-center hover:bg-gray-100 cursor-pointer"
+                onClick={() => toggleSelection(option)}
+              >
+                 <input
+                  type="checkbox"
+                  checked={selectedItems.includes(option)}
+                  onChange={() => toggleSelection(option)}
+                  className="accent-[#084782] w-4 h-4"
+                />
+                <span>{option}</span>
+              </li>
+            ))}
                 </ul>
             </div>
         )}
@@ -71,7 +109,6 @@ const Home:React.FC = () => {
         {/* Table */}
         <div className='w-full overflow-x-auto'>
 
-        
         <table className='w-full border-collapse'>
             <thead>
                 <tr className='border-b-2 border-gray-200'>
