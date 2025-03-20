@@ -114,7 +114,7 @@ const Home: React.FC = () => {
           <table className="w-full border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-3 px-4 font-medium">
+                <th className="text-left py-3 px-4 w-[40%] font-medium">
                   Collection Name
                 </th>
                 <th className="text-left py-3 px-4 font-medium">Type</th>
@@ -129,7 +129,7 @@ const Home: React.FC = () => {
               {filteredCollections.map((collection) => (
                 <tr
                   key={collection.id}
-                  className="border-b border-gray-200 h-[68px] text-sm"
+                  className="border-b hover:bg-slate-50 border-gray-200 h-[68px] text-sm"
                 >
                   <td className="py-3 px-4">
                     <div>
@@ -147,13 +147,13 @@ const Home: React.FC = () => {
                   <td className="py-3 px-4">
                     {(collection.sizeInBytes / (1024 * 1024)).toFixed(2)}MB
                   </td>
-                  <td className="py-3 px-4">
+                  <td className="py-3 px-4 ">
                     {formatDate(collection.releasedOn)}
                   </td>
-                  <td className="py-3 px-4">
+                  <td className="py-3 px-4 justify-items-center">
                     <button
                       onClick={() => navigate(`/details/${collection.id}`)}
-                      className="text-[#025992] text-sm flex items-center gap-1 hover:text-blue-800 cursor-pointer"
+                      className="text-[#025992] text-sm flex items-center gap-1 hover:text-slate-900 cursor-pointer"
                     >
                       <IoEye />
                       View Details
